@@ -28,6 +28,10 @@ pytest
 
 Os testes cobrem cadastro de sala, consumo excessivo, alerta, consumo normal, validação, filtros, consulta de alerta e atualização de sala.
 
+## Publicação sem Docker
+
+Para disponibilizar o sistema na internet, consulte [docs/DEPLOY_VERCEL.md](docs/DEPLOY_VERCEL.md). O dashboard e a API podem ser publicados no Vercel, usando um PostgreSQL gerenciado.
+
 ## Entregáveis da disciplina
 
 O documento de iniciação, planejamento, monitoramento, testes, ODS e encerramento está em [docs/PROJETO.md](docs/PROJETO.md). O roteiro de apresentação está em [docs/ROTEIRO_APRESENTACAO.md](docs/ROTEIRO_APRESENTACAO.md) e o modelo para evidências em [docs/EVIDENCIAS_EQUIPE.md](docs/EVIDENCIAS_EQUIPE.md). Antes da entrega, a equipe deve preencher seus nomes e anexar evidências reais de participação, como histórico de commits e registros de reuniões.

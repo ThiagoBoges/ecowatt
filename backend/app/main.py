@@ -1,5 +1,6 @@
 from collections import defaultdict
 from datetime import date
+import os
 
 from fastapi import Depends, FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
@@ -12,7 +13,8 @@ from .schemas import AlertOut, ReadingCreate, ReadingOut, ReportOut, RoomCreate,
 from .services import build_alert, classify_consumption
 
 app = FastAPI(title="EcoWatt API", version="1.0.0")
-app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173"], allow_methods=["*"], allow_headers=["*"])
+cors_origins = os.getenv("CORS_ORIGINS", "http://localhost:5173").split(",")
+app.add_middleware(CORSMiddleware, allow_origins=cors_origins, allow_methods=["*"], allow_headers=["*"])
 
 
 @app.on_event("startup")
