@@ -1,5 +1,37 @@
 # EcoWatt
 
+MVP acadêmico para a disciplina Gestão de Projetos da UniFAP. O EcoWatt registra consumos simulados de energia em salas, compara cada leitura com a meta cadastrada, gera alertas e apresenta economia potencial no dashboard.
+
+## Tecnologias
+
+- Backend: Python e FastAPI
+- Frontend: JavaScript, React e Chart.js
+- Banco: PostgreSQL e SQLAlchemy
+- Interface: HTML e CSS
+- Ambiente: Docker Compose
+
+## Como executar
+
+1. Instale Docker Desktop.
+2. Na raiz do projeto, execute `docker compose up --build`.
+3. Abra `http://localhost:5173` para o dashboard.
+4. Abra `http://localhost:8000/docs` para a documentação interativa da API.
+
+Para execução sem Docker, instale as dependências de `backend/requirements.txt`, defina `DATABASE_URL` e rode `uvicorn app.main:app --reload` dentro de `backend`. No front-end, rode `npm install` e `npm run dev` dentro de `frontend`.
+
+## Testes
+
+```bash
+cd backend
+pytest
+```
+
+Os testes cobrem cadastro de sala, consumo excessivo, alerta, consumo normal, validação, filtros, consulta de alerta e atualização de sala.
+
+## Entregáveis da disciplina
+
+O documento de iniciação, planejamento, monitoramento, testes, ODS e encerramento está em [docs/PROJETO.md](docs/PROJETO.md). O roteiro de apresentação está em [docs/ROTEIRO_APRESENTACAO.md](docs/ROTEIRO_APRESENTACAO.md) e o modelo para evidências em [docs/EVIDENCIAS_EQUIPE.md](docs/EVIDENCIAS_EQUIPE.md). Antes da entrega, a equipe deve preencher seus nomes e anexar evidências reais de participação, como histórico de commits e registros de reuniões.
+
 ## Contexto do projeto
 
 O EcoWatt é um projeto acadêmico de Tecnologia da Informação da disciplina
